@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Style.EditText.Main" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColorHint">@color/light_white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="drawableTint">@color/grey</item>
+        <item name="drawableSize">2dp</item>
+    </style>
+
+    <style name="SingleLineInputText" parent="FilledBoxInputEditText">
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="FilledBoxInputEditText" parent="FilledBoxInputLayout">
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:background">@drawable/rounded_box</item>
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="FilledBoxInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHighlight">@color/red</item>
+        <item name="android:textColorLink">@color/blue</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="android:layout_gravity">start|center</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="endIconMode">custom</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="Style.TextInputLayout.Main" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_8sdp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+        <item name="boxStrokeColor">@color/grey</item>
+        <item name="boxBackgroundColor">@color/transparent</item>
+        <item name="android:strokeLineCap">round</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:layout_gravity">start|top</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:gravity">start|bottom</item>
+    </style>
+</resources>

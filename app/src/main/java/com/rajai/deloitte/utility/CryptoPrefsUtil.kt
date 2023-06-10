@@ -6,9 +6,7 @@ import com.google.gson.Gson
 import com.rajai.deloitte.R
 import com.rajai.deloitte.enum.SupportedLanguagesEnum
 
-class CryptoPrefsUtil
-//@Inject constructor(@ApplicationContext appContext: Context)
-{
+class CryptoPrefsUtil {
     companion object {
         private lateinit var INSTANCE: CryptoPrefsUtil
         val instance: CryptoPrefsUtil
@@ -19,8 +17,7 @@ class CryptoPrefsUtil
                 return INSTANCE
             }
         private val LANG = Constants.LANG
-        private val PERSIST_RAW_KEY_ROOM_DATABASE = Constants.PERSIST_RAW_KEY_ROOM_DATABASE
-
+        const val AUTHORIZATION = Constants.AUTHORIZATION
     }
 
 
@@ -40,7 +37,6 @@ class CryptoPrefsUtil
             )
         }
     }
-
 
     fun setValue(key: String, value: Any?) {
         when (value) {
@@ -65,6 +61,13 @@ class CryptoPrefsUtil
         return gson.fromJson(json, classOfT)
     }
 
+    fun changeLanguage() {
+        if (getLanguage() == SupportedLanguagesEnum.EN) setValue(
+            LANG,
+            SupportedLanguagesEnum.AR.text
+        )
+        else setValue(LANG, SupportedLanguagesEnum.EN.text)
+    }
 
     fun getLanguage() =
         if (getString(LANG).isNullOrEmpty() || getString(LANG).equals(SupportedLanguagesEnum.EN.text)) SupportedLanguagesEnum.EN
@@ -74,4 +77,7 @@ class CryptoPrefsUtil
         !getString(LANG).isNullOrEmpty() || getString(LANG).equals(SupportedLanguagesEnum.EN.text)
 
     fun isArabic() = getString(LANG).equals(SupportedLanguagesEnum.AR.text)
+    fun clearSessions() {
+        setValue(AUTHORIZATION, "")
+    }
 }

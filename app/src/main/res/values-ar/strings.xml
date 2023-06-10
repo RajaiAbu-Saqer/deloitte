@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">deloitte</string>
+    <string name="news">أخبار</string>
+    <string name="sort"><u>رتب</u></string>
+    <string name="filter_under_line"><u>منقي</u></string>
+    <string name="filter">منقي</string>
+    <string name="search">يبحث</string>
+    <string name="info_select_data_to_filter_news">حدد البيانات لتصفية الأخبار</string>
+    <string name="apply_filter">تطبيق عامل التصفية</string>
+    <string name="details">تفاصيل</string>
+    <string name="settings">إعدادات</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="registration">تسجيل</string>
+    <string name="password">كلمة المرور</string>
+    <string name="first_name">الاسم الأول<font color="#EB3939">*</font></string>
+    <string name="mobile_number">رقم الهاتف المحمول<font color="#EB3939">*</font></string>
+    <string name="email">بريد إلكتروني<font color="#EB3939">*</font></string>
+    <string name="hint_password">كلمة المرور<font color="#EB3939">*</font></string>
+    <string name="my_birthday_is_on">متى يحين عيد ميلادك؟<font color="#EB3939">*</font></string>
+    <string name="nationality">جنسية<font color="#EB3939">*</font></string>
+    <string name="phone_number">رقم التليفون<font color="#EB3939">*</font></string>
+    <string name="error_first_name_required">من فضلك أدخل إسمك</string>
+    <string name="error_first_name_invalid">الرجاء إدخال اسم <br /> بدون أحرف خاصة</string>
+    <string name="error_service_length_of_first_last_is_less_thank_two_characters">الرجاء إدخال اسم أطول من حرفين</string>
+    <string name="error_email_required">رجاءا أدخل بريدك الإلكتروني</string>
+    <string name="error_invalide_email_format">البريد الإلكتروني غير صالح</string>
+    <string name="error_nationality_required">الرجاء إدخال جنسيتك</string>
+    <string name="error_invalid_phone_number">الرجاء إدخال رقم هاتف صحيح</string>
+    <string name="error_required_phone_number">يرجى إدخال رقم الهاتف الخاص بك</string>
+    <string name="error_gender_required">الرجاء إدخال جنسك</string>
+    <string name="error_required_password">كلمة المرور مطلوبة</string>
+    <string name="error_password_eight_digits">يجب أن تتكون كلمة المرور من 8 أرقام أو أكثر</string>
+    <string name="error_complix_password">يجب أن تتضمن كلمة المرور رقمًا واحدًا على الأقل وحرفًا خاصًا يجب أن تشتمل كلمة المرور على أحرف كبيرة وصغيرة</string>
+    <string name="day">يوم</string>
+    <string name="week">أسبوع</string>
+    <string name="month">شهر</string>
+    <string name="year">سنة</string>
+    <string name="submit">يُقدِّم</string>
+    <string name="dashboard">لوحة القيادة</string>
+    <string name="more">أكثر</string>
+    <string name="no_result">لا نتيجة</string>
+    <string name="news_details">تفاصيل الخبر</string>
+    <string name="invalid_login">تسجيل الدخول غير صالح</string>
+    <string name="error_email_already_exists">البريد الالكتروني موجود بالفعل</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="language">EN</string>
+</resources>

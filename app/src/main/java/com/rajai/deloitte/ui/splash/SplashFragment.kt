@@ -2,7 +2,6 @@ package com.rajai.deloitte.ui.splash
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.rajai.deloitte.base_ui.BaseMainFragment
 import com.rajai.deloitte.databinding.SplashFragmentBinding
@@ -21,8 +20,11 @@ class SplashFragment : BaseMainFragment<SplashFragmentBinding>() {
 
     private fun observeViewModel() {
         with(splashViewModel) {
-            navigateToNextScreen.observeEvent(viewLifecycleOwner) {
-                if (it) Toast.makeText(requireContext(), "Yes", Toast.LENGTH_SHORT).show()
+            navigateToRegistrationScreen.observeEvent(viewLifecycleOwner) {
+                if (it) navigateTo(SplashFragmentDirections.actionNavigationSplashToNavigationRegistration())
+            }
+            navigateToDashBoardScreen.observeEvent(viewLifecycleOwner) {
+                if (it) navigateTo(SplashFragmentDirections.actionSplashFragmentToNavigationDashboard())
             }
         }
     }

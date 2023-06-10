@@ -17,16 +17,13 @@ import com.rajai.deloitte.R
 import com.rajai.deloitte.databinding.ActivityMainBinding
 import com.rajai.deloitte.dialog.ProgressBarLoading
 import com.rajai.deloitte.enum.SupportedLanguagesEnum
-import com.rajai.deloitte.ui.DashboardFragment
-import com.rajai.deloitte.ui.MoreFragment
+import com.rajai.deloitte.ui.home.MoreFragment
+import com.rajai.deloitte.ui.home.dashboard.DashboardFragment
 import com.rajai.deloitte.utility.Constants
 import com.rajai.deloitte.utility.CryptoPrefsUtil
 import java.util.*
 
 open class BaseActivity : AppCompatActivity() {
-//    @Inject
-
-    //    var cryptoPrefsUtil: CryptoPrefsUtil = CryptoPrefsUtil(this)
     private val navHostFragment =
         supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment?
     private val progressBarLoading by lazy { ProgressBarLoading(this) }
@@ -36,8 +33,6 @@ open class BaseActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_dashboard, R.id.navigation_more
@@ -109,16 +104,11 @@ open class BaseActivity : AppCompatActivity() {
     private fun getCurrentFragment() =
         supportFragmentManager.fragments[0].childFragmentManager.fragments[0]
 
-
-//    private fun getCurrentFragment() =
-//        navHostFragment?.childFragmentManager?.findFragmentById(R.id.nav_host_fragment_activity_main)
-////        navHostFragment?.childFragmentManager?.primaryNavigationFragment
-
     fun isMainFragments() =
         getCurrentFragment() is DashboardFragment || getCurrentFragment() is MoreFragment
 
     override fun onBackPressed() {
-        if (getStackCount() == 0 || isMainFragments()) moveTaskToBack(true)
+        if (isMainFragments()) moveTaskToBack(true)
         else onBackPressedDispatcher.onBackPressed()
     }
 
